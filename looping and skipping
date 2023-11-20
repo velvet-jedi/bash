@@ -1,0 +1,10 @@
+#!/bin/bash
+
+for ((I=1; I<=99; I++))
+do
+    if [ $((I % 2)) -ne 0 ]
+    then    
+        echo $I
+    fi 
+done
+
