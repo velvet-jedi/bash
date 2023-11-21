@@ -3,11 +3,9 @@
 read n
 add=0
 
-for (( i = 1 ; i <= $n ; i++))
-    do
-        read x
-        add=$((add+x))    
+for (( i = 1 ; i <= $n ; i++)); do
+        read x;
+        ((add+=x))
 done
 
-average=$(echo "scale=3; $add/$n" | bc)
-printf "%.3f" `echo $average`
+printf "%.3f" $(echo $add/$n | bc -l)
