@@ -1,0 +1,13 @@
+#/bin/bash
+
+read exp
+
+
+printf "%.3f\n" `echo "$exp" | bc -l`
+
+# bc - An arbitrary precision calculator language
+# -l,  Define the standard math library.
+# $exp (which presumably holds a mathematical expression) and   # pipes it into the bc command with the -l option.
+
+# "$(...)": This is command substitution. The result of the echo # "$exp" | bc -l` command is captured and substituted into the   # outer command.
+
